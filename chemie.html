@@ -1,0 +1,477 @@
+!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chemie & Petrochemie – Welmac | Engineering für chemische Anlagen</title>
+  <meta name="description" content="Welmac liefert Engineering, Anlagen und Maschinen für die chemische und petrochemische Industrie: VOC-Rückgewinnung, Abgasreinigung, Inertgasgeneratoren, Wärmetauscher und mehr." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.welmac.de/chemie.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue-deep:   #0a1f3c;
+      --blue-mid:    #1a3a6e;
+      --blue-brand:  #1d4fa0;
+      --blue-light:  #3a72c4;
+      --blue-accent: #7aabff;
+      --blue-pale:   #e8eef8;
+      --off-white:   #f4f6fb;
+      --white:       #ffffff;
+      --text:        #111827;
+      --muted:       #4b5a6e;
+      --border:      #c8d5e8;
+      --ff-display:  'Fraunces', Georgia, serif;
+      --ff-body:     'DM Sans', system-ui, sans-serif;
+      --radius: 4px;
+      --trans: 0.25s ease;
+      --max-w: 1200px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--ff-body); font-weight: 300; color: var(--text); background: var(--white); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .skip-link { position: absolute; top: -100px; left: 1rem; background: var(--blue-brand); color: var(--white); padding: .5rem 1rem; border-radius: var(--radius); font-weight: 500; z-index: 9999; transition: top .2s; }
+    .skip-link:focus { top: 1rem; }
+
+    /* LANG BAR */
+    .lang-bar { background: var(--blue-deep); border-bottom: 1px solid rgba(255,255,255,.07); }
+    .lang-bar-inner { max-width: var(--max-w); margin: 0 auto; padding: .45rem 2rem; display: flex; justify-content: flex-end; align-items: center; gap: .45rem; }
+    .lang-label { font-size: .7rem; color: rgba(255,255,255,.3); letter-spacing: .1em; text-transform: uppercase; margin-right: .4rem; }
+    .lang-btn { font-size: .7rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.45); padding: .25rem .65rem; border: 1px solid rgba(255,255,255,.15); border-radius: 100px; cursor: pointer; background: none; font-family: var(--ff-body); transition: var(--trans); }
+    .lang-btn:hover { color: var(--white); border-color: rgba(255,255,255,.4); }
+    .lang-btn.active { color: var(--white); background: var(--blue-brand); border-color: var(--blue-brand); }
+
+    /* HEADER */
+    header { position: sticky; top: 0; z-index: 100; background: rgba(10,31,60,.97); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(58,114,196,.25); }
+    .header-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--ff-display); font-size: 1.65rem; font-weight: 600; color: var(--white); letter-spacing: .12em; text-transform: uppercase; }
+    .logo em { font-style: normal; color: var(--blue-accent); }
+    nav { display: flex; align-items: center; gap: .1rem; }
+    nav a { font-size: .78rem; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.65); padding: .5rem .85rem; border-radius: var(--radius); transition: var(--trans); }
+    nav a:hover, nav a[aria-current="page"] { color: var(--white); background: rgba(58,114,196,.2); }
+    nav a[aria-current="page"] { color: var(--blue-accent); }
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+    .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--white); }
+
+    /* PAGE HERO */
+    .page-hero { background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue-mid) 60%, var(--blue-brand) 100%); padding: 5rem 2rem 4rem; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(122,171,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(122,171,255,.04) 1px, transparent 1px); background-size: 60px 60px; }
+    .page-hero-inner { max-width: var(--max-w); margin: 0 auto; position: relative; z-index: 1; }
+    .breadcrumb { font-size: .75rem; color: rgba(255,255,255,.4); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1.25rem; display: flex; align-items: center; gap: .5rem; }
+    .breadcrumb a { color: rgba(255,255,255,.4); transition: var(--trans); }
+    .breadcrumb a:hover { color: var(--blue-accent); }
+    .breadcrumb span { color: rgba(255,255,255,.2); }
+    .page-hero h1 { font-family: var(--ff-display); font-size: clamp(2rem,5vw,3.8rem); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 1rem; animation: fadeUp .6s ease both; }
+    .page-hero h1 em { font-style: italic; color: var(--blue-accent); }
+    .page-hero-desc { font-size: 1rem; color: rgba(255,255,255,.6); max-width: 600px; line-height: 1.8; animation: fadeUp .6s .1s ease both; }
+
+    /* SUBNAVIGATION */
+    .subnav { background: var(--blue-mid); border-bottom: 1px solid rgba(122,171,255,.15); }
+    .subnav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
+    .subnav-inner::-webkit-scrollbar { display: none; }
+    .subnav-inner a { font-size: .75rem; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.5); padding: 1rem 1.1rem; white-space: nowrap; border-bottom: 2px solid transparent; transition: var(--trans); }
+    .subnav-inner a:hover { color: var(--white); border-bottom-color: rgba(122,171,255,.4); }
+
+    /* SECTIONS */
+    .content-section { padding: 5rem 2rem; }
+    .section-inner { max-width: var(--max-w); margin: 0 auto; }
+    .section-label { font-size: .72rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--blue-brand); margin-bottom: .75rem; display: flex; align-items: center; gap: .75rem; }
+    .section-label::before { content: ''; display: block; width: 24px; height: 1.5px; background: var(--blue-brand); }
+    h2 { font-family: var(--ff-display); font-size: clamp(1.7rem,3vw,2.4rem); font-weight: 300; line-height: 1.15; color: var(--blue-deep); margin-bottom: 1rem; }
+    .section-intro { color: var(--muted); max-width: 680px; margin-bottom: 3rem; font-size: 1rem; line-height: 1.85; }
+
+    /* SERVICES 3-COL */
+    .services-bg { background: var(--off-white); }
+    .services-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+    .svc-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 1.75rem; transition: var(--trans); position: relative; overflow: hidden; }
+    .svc-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--blue-brand); transition: height .4s ease; }
+    .svc-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(10,31,60,.1); }
+    .svc-card:hover::before { height: 100%; }
+    .svc-icon { width: 44px; height: 44px; background: var(--blue-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
+    .svc-icon svg { width: 20px; height: 20px; stroke: var(--blue-brand); fill: none; stroke-width: 1.5; }
+    .svc-card h3 { font-family: var(--ff-display); font-size: 1.05rem; font-weight: 400; color: var(--blue-deep); margin-bottom: .65rem; }
+    .svc-card p { font-size: .86rem; color: var(--muted); line-height: 1.7; }
+
+    /* PRODUCT GROUPS */
+    .products-bg { background: var(--white); }
+    .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+
+    .prod-group { border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+    .prod-group-header { background: var(--blue-deep); padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: .9rem; }
+    .prod-group-header svg { width: 20px; height: 20px; stroke: var(--blue-accent); fill: none; stroke-width: 1.5; flex-shrink: 0; }
+    .prod-group-header h3 { font-family: var(--ff-display); font-size: 1rem; font-weight: 400; color: var(--white); line-height: 1.25; }
+    .prod-group-body { padding: 1.25rem 1.5rem; background: var(--off-white); }
+    .prod-list { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+    .prod-list li { display: flex; align-items: flex-start; gap: .65rem; font-size: .88rem; color: var(--muted); padding-bottom: .5rem; border-bottom: 1px solid var(--border); }
+    .prod-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .prod-list li::before { content: ''; display: block; width: 5px; height: 5px; background: var(--blue-brand); border-radius: 50%; margin-top: .55rem; flex-shrink: 0; }
+
+    /* FOCUS STRIP */
+    .focus-strip { background: var(--blue-deep); padding: 3rem 2rem; }
+    .focus-strip-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center; }
+    .focus-strip-label { font-size: .72rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--blue-accent); margin-bottom: .75rem; }
+    .focus-strip h3 { font-family: var(--ff-display); font-size: 1.6rem; font-weight: 300; color: var(--white); line-height: 1.25; }
+    .focus-tags { display: flex; flex-wrap: wrap; gap: .65rem; }
+    .focus-tag { padding: .5rem 1.1rem; background: rgba(122,171,255,.1); border: 1px solid rgba(122,171,255,.25); border-radius: 100px; font-size: .82rem; color: rgba(255,255,255,.75); }
+
+    /* CTA */
+    .cta-section { background: var(--blue-pale); }
+    .cta-inner { max-width: var(--max-w); margin: 0 auto; padding: 4rem 2rem; text-align: center; }
+    .cta-inner h2 { color: var(--blue-deep); margin-bottom: 1rem; }
+    .cta-inner p { color: var(--muted); max-width: 500px; margin: 0 auto 2rem; }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; padding: .85rem 1.8rem; border-radius: var(--radius); font-family: var(--ff-body); font-size: .82rem; font-weight: 500; letter-spacing: .07em; text-transform: uppercase; border: 1.5px solid transparent; transition: var(--trans); }
+    .btn-primary { background: var(--blue-brand); color: var(--white); border-color: var(--blue-brand); }
+    .btn-primary:hover { background: var(--blue-light); border-color: var(--blue-light); transform: translateY(-1px); }
+
+    /* FOOTER */
+    footer { background: var(--blue-deep); border-top: 1px solid rgba(58,114,196,.2); padding: 1.5rem 2rem; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-copy { font-size: .78rem; color: rgba(255,255,255,.3); }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links a { font-size: .78rem; color: rgba(255,255,255,.35); transition: var(--trans); }
+    .footer-links a:hover { color: var(--blue-accent); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .fade-in { opacity: 0; }
+    .fade-in.visible { animation: fadeUp .6s ease both; }
+
+    /* LANGUAGE */
+    [data-lang] { display: none; }
+    .lang-de [data-lang="de"],
+    .lang-en [data-lang="en"],
+    .lang-fr [data-lang="fr"] { display: inherit; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .services-grid-3 { grid-template-columns: 1fr 1fr; }
+      .products-grid { grid-template-columns: 1fr; }
+      .focus-strip-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+    @media (max-width: 600px) {
+      nav { display: none; }
+      nav.open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; background: var(--blue-deep); padding: 1rem; border-bottom: 1px solid rgba(58,114,196,.2); gap: 0; z-index: 99; }
+      nav.open a { padding: .9rem 1rem; }
+      .menu-toggle { display: flex; }
+      .services-grid-3 { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+
+<body class="lang-de">
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+  <!-- LANG BAR -->
+  <div class="lang-bar" role="navigation" aria-label="Sprachauswahl">
+    <div class="lang-bar-inner">
+      <span class="lang-label" data-lang="de">Sprache:</span>
+      <span class="lang-label" data-lang="en">Language:</span>
+      <span class="lang-label" data-lang="fr">Langue :</span>
+      <button class="lang-btn active" onclick="setLang('de')" lang="de" aria-label="Deutsch">DE</button>
+      <button class="lang-btn" onclick="setLang('en')" lang="en" aria-label="English">EN</button>
+      <button class="lang-btn" onclick="setLang('fr')" lang="fr" aria-label="Français">FR</button>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Welmac – Startseite">Wel<em>mac</em></a>
+      <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="main-nav" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" role="navigation" aria-label="Hauptnavigation">
+        <a href="index.html"><span data-lang="de">Unternehmen</span><span data-lang="en">Company</span><span data-lang="fr">Entreprise</span></a>
+        <a href="industriebedarf.html"><span data-lang="de">Industriebedarf</span><span data-lang="en">Industrial Supply</span><span data-lang="fr">Fournitures</span></a>
+        <a href="chemie.html" aria-current="page"><span data-lang="de">Chemie</span><span data-lang="en">Chemistry</span><span data-lang="fr">Chimie</span></a>
+        <a href="holzbearbeitung.html"><span data-lang="de">Holzbearbeitung</span><span data-lang="en">Woodworking</span><span data-lang="fr">Travail du Bois</span></a>
+        <a href="kontakt.html"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span><span data-lang="fr">Contact</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="Brotkrumen-Navigation">
+          <a href="index.html">Welmac</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">
+            <span data-lang="de">Chemie</span><span data-lang="en">Chemistry</span><span data-lang="fr">Chimie</span>
+          </span>
+        </nav>
+        <h1 id="page-title">
+          <span data-lang="de">Chemie &amp;<br /><em>Petrochemie</em></span>
+          <span data-lang="en">Chemical &amp;<br /><em>Petrochemical</em> Industry</span>
+          <span data-lang="fr">Industrie<br /><em>Chimique &amp; Pétrochimique</em></span>
+        </h1>
+        <p class="page-hero-desc">
+          <span data-lang="de">Welmac liefert Engineering, Anlagen und Maschinen für die chemische und petrochemische Industrie – mit Fokus auf kosten- und energiesparende sowie umweltfreundliche Prozesse.</span>
+          <span data-lang="en">Welmac delivers engineering, plants and machines for the chemical and petrochemical industry – focusing on cost-efficient, energy-saving and environmentally friendly processes.</span>
+          <span data-lang="fr">Welmac fournit ingénierie, installations et machines pour l'industrie chimique et pétrochimique – en mettant l'accent sur des procédés économes en énergie et respectueux de l'environnement.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- SUBNAVIGATION -->
+    <nav class="subnav" aria-label="Chemie Unterseiten">
+      <div class="subnav-inner">
+        <a href="chemieanlagen.html"><span data-lang="de">Chemieanlagen</span><span data-lang="en">Chemical Plants</span><span data-lang="fr">Installations Chimiques</span></a>
+        <a href="gasanlagen.html"><span data-lang="de">Gasanlagen</span><span data-lang="en">Gas Plants</span><span data-lang="fr">Installations Gaz</span></a>
+        <a href="gasanlagen-reinigung.html"><span data-lang="de">Reinigung Gasanlagen</span><span data-lang="en">Gas Plant Cleaning</span><span data-lang="fr">Nettoyage Gaz</span></a>
+        <a href="gasequipment.html"><span data-lang="de">Gasequipment</span><span data-lang="en">Gas Equipment</span><span data-lang="fr">Équipement Gaz</span></a>
+        <a href="abgasreinigungsanlagen.html"><span data-lang="de">Abgasreinigung</span><span data-lang="en">Exhaust Gas Cleaning</span><span data-lang="fr">Épuration des Gaz</span></a>
+        <a href="lieferungen.html"><span data-lang="de">Weitere Lieferungen</span><span data-lang="en">Other Deliveries</span><span data-lang="fr">Autres Livraisons</span></a>
+      </div>
+    </nav>
+
+    <!-- CORE SERVICES -->
+    <section class="services-bg content-section" aria-labelledby="services-heading">
+      <div class="section-inner">
+        <p class="section-label"><span data-lang="de">Kernleistungen</span><span data-lang="en">Core Services</span><span data-lang="fr">Prestations Clés</span></p>
+        <h2 id="services-heading">
+          <span data-lang="de">Was Welmac im Chemiebereich liefert</span>
+          <span data-lang="en">What Welmac delivers in the chemical sector</span>
+          <span data-lang="fr">Ce que Welmac fournit dans le secteur chimique</span>
+        </h2>
+        <p class="section-intro">
+          <span data-lang="de">Vom ersten Konzept bis zur betriebsbereiten Anlage – Welmac begleitet Ihr Projekt in der chemischen und petrochemischen Industrie in jeder Phase.</span>
+          <span data-lang="en">From the first concept to a ready-to-operate plant – Welmac supports your project in the chemical and petrochemical industry at every stage.</span>
+          <span data-lang="fr">Du premier concept à l'installation prête à fonctionner – Welmac accompagne votre projet dans l'industrie chimique et pétrochimique à chaque étape.</span>
+        </p>
+        <div class="services-grid-3">
+
+          <article class="svc-card fade-in">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+            </div>
+            <h3><span data-lang="de">Design-, Basic- & Detail-Engineering</span><span data-lang="en">Design, Basic & Detail Engineering</span><span data-lang="fr">Ingénierie Design, Basic & Détail</span></h3>
+            <p><span data-lang="de">Vollständige Planungsleistungen von der Konzeptstudie bis zur ausführungsreifen Detailplanung für chemische Prozessanlagen.</span><span data-lang="en">Complete planning services from concept study to execution-ready detail planning for chemical process plants.</span><span data-lang="fr">Prestations de planification complètes, de l'étude conceptuelle à la planification détaillée prête à l'exécution.</span></p>
+          </article>
+
+          <article class="svc-card fade-in">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+            </div>
+            <h3><span data-lang="de">Consulting & Machbarkeitsstudien</span><span data-lang="en">Consulting & Feasibility Studies</span><span data-lang="fr">Conseil & Études de Faisabilité</span></h3>
+            <p><span data-lang="de">Unabhängige Beratung und fundierte Machbarkeitsstudien als Entscheidungsgrundlage für Ihre Investitionen in der Prozessindustrie.</span><span data-lang="en">Independent consulting and sound feasibility studies as a basis for your investment decisions in the process industry.</span><span data-lang="fr">Conseil indépendant et études de faisabilité solides comme base de décision pour vos investissements dans l'industrie de process.</span></p>
+          </article>
+
+          <article class="svc-card fade-in">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/></svg>
+            </div>
+            <h3><span data-lang="de">Anlagen & Maschinen</span><span data-lang="en">Plants & Machines</span><span data-lang="fr">Installations & Machines</span></h3>
+            <p><span data-lang="de">Lieferung kompletter Anlagen und Einzelmaschinen von namhaften deutschen und europäischen Herstellern für chemische Prozesse.</span><span data-lang="en">Delivery of complete plants and individual machines from renowned German and European manufacturers for chemical processes.</span><span data-lang="fr">Livraison d'installations complètes et de machines individuelles de fabricants allemands et européens renommés.</span></p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOCUS STRIP: Umwelt -->
+    <div class="focus-strip" aria-label="Schwerpunkte">
+      <div class="focus-strip-inner">
+        <div>
+          <p class="focus-strip-label"><span data-lang="de">Unser Schwerpunkt</span><span data-lang="en">Our Focus</span><span data-lang="fr">Notre Priorité</span></p>
+          <h3>
+            <span data-lang="de">Kosten-, energie­sparend &amp; umweltfreundlich</span>
+            <span data-lang="en">Cost-efficient, energy-saving &amp; eco-friendly</span>
+            <span data-lang="fr">Économique, sobre en énergie &amp; écologique</span>
+          </h3>
+        </div>
+        <div class="focus-tags" aria-label="Schwerpunktthemen">
+          <span class="focus-tag"><span data-lang="de">VOC-Rückgewinnung</span><span data-lang="en">VOC Recovery</span><span data-lang="fr">Récupération COV</span></span>
+          <span class="focus-tag"><span data-lang="de">Emissionsreduktion</span><span data-lang="en">Emission Reduction</span><span data-lang="fr">Réduction des Émissions</span></span>
+          <span class="focus-tag"><span data-lang="de">Energieeffizienz</span><span data-lang="en">Energy Efficiency</span><span data-lang="fr">Efficacité Énergétique</span></span>
+          <span class="focus-tag"><span data-lang="de">Kreislaufwirtschaft</span><span data-lang="en">Circular Economy</span><span data-lang="fr">Économie Circulaire</span></span>
+          <span class="focus-tag"><span data-lang="de">Prozessoptimierung</span><span data-lang="en">Process Optimisation</span><span data-lang="fr">Optimisation des Procédés</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT GROUPS -->
+    <section class="products-bg content-section" aria-labelledby="products-heading">
+      <div class="section-inner">
+        <p class="section-label"><span data-lang="de">Produktbereiche</span><span data-lang="en">Product Areas</span><span data-lang="fr">Gammes de Produits</span></p>
+        <h2 id="products-heading">
+          <span data-lang="de">Unsere Lieferpalette im Detail</span>
+          <span data-lang="en">Our delivery range in detail</span>
+          <span data-lang="fr">Notre gamme de livraison en détail</span>
+        </h2>
+        <p class="section-intro">
+          <span data-lang="de">Welmac liefert Systeme, Anlagen und Komponenten für die chemische und petrochemische Industrie – aus einer Hand und weltweit.</span>
+          <span data-lang="en">Welmac delivers systems, plants and components for the chemical and petrochemical industry – from a single source, worldwide.</span>
+          <span data-lang="fr">Welmac livre systèmes, installations et composants pour l'industrie chimique et pétrochimique – de source unique, dans le monde entier.</span>
+        </p>
+
+        <div class="products-grid">
+
+          <!-- VOC -->
+          <article class="prod-group fade-in" aria-labelledby="grp1">
+            <div class="prod-group-header">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2"/><path d="M12 6v6l4 2"/></svg>
+              <h3 id="grp1">
+                <span data-lang="de">VOC-Rückgewinnung & Lösemittel</span>
+                <span data-lang="en">VOC Recovery & Solvent Systems</span>
+                <span data-lang="fr">Récupération COV & Solvants</span>
+              </h3>
+            </div>
+            <div class="prod-group-body">
+              <ul class="prod-list">
+                <li><span data-lang="de">Komplette Systeme für die Rückgewinnung von Benzin- und Lösemitteldämpfen (VOC)</span><span data-lang="en">Complete systems for the recovery of petrol and solvent vapours (VOC)</span><span data-lang="fr">Systèmes complets pour la récupération de vapeurs d'essence et de solvants (COV)</span></li>
+                <li><span data-lang="de">Kondensation</span><span data-lang="en">Condensation</span><span data-lang="fr">Condensation</span></li>
+                <li><span data-lang="de">Adsorption / Absorption</span><span data-lang="en">Adsorption / Absorption</span><span data-lang="fr">Adsorption / Absorption</span></li>
+                <li><span data-lang="de">Membrantechnologien</span><span data-lang="en">Membrane technologies</span><span data-lang="fr">Technologies membranaires</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Luftreinhaltung -->
+          <article class="prod-group fade-in" aria-labelledby="grp2">
+            <div class="prod-group-header">
+              <svg viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+              <h3 id="grp2">
+                <span data-lang="de">Luftreinhaltung & Abgasreinigung</span>
+                <span data-lang="en">Air Pollution Control & Exhaust Gas Cleaning</span>
+                <span data-lang="fr">Contrôle de la Pollution Atmosphérique</span>
+              </h3>
+            </div>
+            <div class="prod-group-body">
+              <ul class="prod-list">
+                <li><span data-lang="de">Systeme zur Kontrolle von Luftverunreinigungen</span><span data-lang="en">Air pollution control systems</span><span data-lang="fr">Systèmes de contrôle de la pollution de l'air</span></li>
+                <li><span data-lang="de">Kondensation</span><span data-lang="en">Condensation</span><span data-lang="fr">Condensation</span></li>
+                <li><span data-lang="de">Adsorption / Absorption</span><span data-lang="en">Adsorption / Absorption</span><span data-lang="fr">Adsorption / Absorption</span></li>
+                <li><span data-lang="de">Katalytische und thermische Oxidation</span><span data-lang="en">Catalytic and thermal oxidation</span><span data-lang="fr">Oxydation catalytique et thermique</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Speicher & Gas -->
+          <article class="prod-group fade-in" aria-labelledby="grp3">
+            <div class="prod-group-header">
+              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              <h3 id="grp3">
+                <span data-lang="de">Speicher, Tanks & Inertgas</span>
+                <span data-lang="en">Storage, Tanks & Inert Gas</span>
+                <span data-lang="fr">Stockage, Réservoirs & Gaz Inerte</span>
+              </h3>
+            </div>
+            <div class="prod-group-body">
+              <ul class="prod-list">
+                <li><span data-lang="de">Speicher, Tanks, Rohrleitungssysteme</span><span data-lang="en">Storage tanks, piping systems</span><span data-lang="fr">Réservoirs, cuves, systèmes de tuyauterie</span></li>
+                <li><span data-lang="de">Schutzgas-Inertisierung</span><span data-lang="en">Protective gas inerting</span><span data-lang="fr">Inertage au gaz protecteur</span></li>
+                <li><span data-lang="de">PSA-Generatoren</span><span data-lang="en">PSA generators</span><span data-lang="fr">Générateurs PSA</span></li>
+                <li><span data-lang="de">Membran-Generatoren</span><span data-lang="en">Membrane generators</span><span data-lang="fr">Générateurs à membrane</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Komponenten -->
+          <article class="prod-group fade-in" aria-labelledby="grp4">
+            <div class="prod-group-header">
+              <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              <h3 id="grp4">
+                <span data-lang="de">Komponenten für petrochemische Anlagen</span>
+                <span data-lang="en">Components for Petrochemical Plants</span>
+                <span data-lang="fr">Composants pour Installations Pétrochimiques</span>
+              </h3>
+            </div>
+            <div class="prod-group-body">
+              <ul class="prod-list">
+                <li><span data-lang="de">Wärmetauscher</span><span data-lang="en">Heat exchangers</span><span data-lang="fr">Échangeurs de chaleur</span></li>
+                <li><span data-lang="de">Kompressoren und komplette Kompressorstationen</span><span data-lang="en">Compressors and complete compressor stations</span><span data-lang="fr">Compresseurs et stations de compression complètes</span></li>
+                <li><span data-lang="de">Gebläse, Ventilatoren</span><span data-lang="en">Blowers, fans</span><span data-lang="fr">Soufflantes, ventilateurs</span></li>
+                <li><span data-lang="de">Katalysatoren, Molekularsieb, Aktivkohle</span><span data-lang="en">Catalysts, molecular sieve, activated carbon</span><span data-lang="fr">Catalyseurs, tamis moléculaire, charbon actif</span></li>
+                <li><span data-lang="de">Ersatzteile</span><span data-lang="en">Spare parts</span><span data-lang="fr">Pièces de rechange</span></li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="cta-inner">
+        <p class="section-label" style="justify-content:center;">
+          <span data-lang="de">Projekt anfragen</span><span data-lang="en">Request a project</span><span data-lang="fr">Demander un projet</span>
+        </p>
+        <h2 id="cta-heading">
+          <span data-lang="de">Haben Sie ein Projekt in der Chemiebranche?</span>
+          <span data-lang="en">Do you have a project in the chemical industry?</span>
+          <span data-lang="fr">Avez-vous un projet dans l'industrie chimique ?</span>
+        </h2>
+        <p>
+          <span data-lang="de">Kontaktieren Sie uns – wir erstellen Ihnen eine individuelle Lösung für Ihre Anlage.</span>
+          <span data-lang="en">Contact us – we will create an individual solution for your plant.</span>
+          <span data-lang="fr">Contactez-nous – nous vous proposerons une solution individuelle pour votre installation.</span>
+        </p>
+        <a href="kontakt.html" class="btn btn-primary">
+          <span data-lang="de">Kontakt aufnehmen</span><span data-lang="en">Get in touch</span><span data-lang="fr">Nous contacter</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 Welmac Maschinen-Anlagen GmbH · Unterensingen, Germany</p>
+      <ul class="footer-links">
+        <li><a href="index.html"><span data-lang="de">Startseite</span><span data-lang="en">Home</span><span data-lang="fr">Accueil</span></a></li>
+        <li><a href="kontakt.html"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span><span data-lang="fr">Contact</span></a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span><span data-lang="fr">Confidentialité</span></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.className = 'lang-' + lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.lang === lang));
+      try { localStorage.setItem('welmac-lang', lang); } catch(e) {}
+    }
+    try {
+      const saved = localStorage.getItem('welmac-lang');
+      if (saved && ['de','en','fr'].includes(saved)) setLang(saved);
+    } catch(e) {}
+
+    function toggleMenu(btn) {
+      const nav = document.getElementById('main-nav');
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    }
+    document.querySelectorAll('#main-nav a').forEach(l => l.addEventListener('click', () => {
+      document.getElementById('main-nav').classList.remove('open');
+      document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');
+    }));
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 100);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
