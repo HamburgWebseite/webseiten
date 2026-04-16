@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="de" id="html-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welmac – Engineering & Anlagenbau | Industrieanlagen aus Deutschland</title>
+  <meta name="description" content="Welmac Maschinen-Anlagen GmbH aus Unterensingen: Ihr Partner für Engineering, Projektierung und Lieferung kompletter Industrieanlagen. Erfahrung seit über 25 Jahren – weltweit tätig, u.a. in Algerien, Nigeria und China." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.welmac.de/" />
+  <meta property="og:title" content="Welmac – Engineering & Industrieanlagenbau aus Deutschland" />
+  <meta property="og:description" content="Komplettlösungen für Industrieanlagen: Engineering, Lieferung, Inbetriebnahme und technische Betreuung. Seit über 25 Jahren international tätig." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Welmac Maschinen-Anlagen GmbH","url":"https://www.welmac.de","description":"Engineering- und Projektierungs-Gesellschaft für Industrieanlagen.","address":{"@type":"PostalAddress","streetAddress":"Kelterstraße 69","postalCode":"72669","addressLocality":"Unterensingen","addressCountry":"DE"},"telephone":"+49-7022-9669-0","email":"info@welmac.de","areaServed":["DZ","GA","NG","MX","CN","TW","KR","HK","DE"]}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue-deep:   #0a1f3c;
+      --blue-mid:    #1a3a6e;
+      --blue-brand:  #1d4fa0;
+      --blue-light:  #3a72c4;
+      --blue-accent: #7aabff;
+      --blue-pale:   #e8eef8;
+      --off-white:   #f4f6fb;
+      --white:       #ffffff;
+      --text:        #111827;
+      --muted:       #4b5a6e;
+      --border:      #c8d5e8;
+      --ff-display:  'Fraunces', Georgia, serif;
+      --ff-body:     'DM Sans', system-ui, sans-serif;
+      --radius: 4px;
+      --trans: 0.25s ease;
+      --max-w: 1200px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--ff-body); font-weight: 300; color: var(--text); background: var(--white); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .skip-link { position: absolute; top: -100px; left: 1rem; background: var(--blue-brand); color: var(--white); padding: .5rem 1rem; border-radius: var(--radius); font-weight: 500; z-index: 9999; transition: top .2s; }
+    .skip-link:focus { top: 1rem; }
+
+    /* LANG BAR */
+    .lang-bar { background: var(--blue-deep); border-bottom: 1px solid rgba(255,255,255,.07); }
+    .lang-bar-inner { max-width: var(--max-w); margin: 0 auto; padding: .45rem 2rem; display: flex; justify-content: flex-end; align-items: center; gap: .45rem; }
+    .lang-label { font-size: .7rem; color: rgba(255,255,255,.3); letter-spacing: .1em; text-transform: uppercase; margin-right: .4rem; }
+    .lang-btn { font-size: .7rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.45); padding: .25rem .65rem; border: 1px solid rgba(255,255,255,.15); border-radius: 100px; cursor: pointer; background: none; font-family: var(--ff-body); transition: var(--trans); }
+    .lang-btn:hover { color: var(--white); border-color: rgba(255,255,255,.4); }
+    .lang-btn.active { color: var(--white); background: var(--blue-brand); border-color: var(--blue-brand); }
+
+    /* HEADER */
+    header { position: sticky; top: 0; z-index: 100; background: rgba(10,31,60,.97); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(58,114,196,.25); }
+    .header-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--ff-display); font-size: 1.65rem; font-weight: 600; color: var(--white); letter-spacing: .12em; text-transform: uppercase; }
+    .logo em { font-style: normal; color: var(--blue-accent); }
+    nav { display: flex; align-items: center; gap: .1rem; }
+    nav a { font-size: .78rem; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.65); padding: .5rem .85rem; border-radius: var(--radius); transition: var(--trans); }
+    nav a:hover, nav a[aria-current="page"] { color: var(--white); background: rgba(58,114,196,.2); }
+    nav a[aria-current="page"] { color: var(--blue-accent); }
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+    .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--white); transition: var(--trans); }
+
+    /* HERO */
+    .hero { position: relative; overflow: hidden; min-height: 92vh; display: flex; align-items: center; }
+    .hero-bg { position: absolute; inset: 0; background-image: url('IMG_0572.jpeg'); background-size: cover; background-position: center 30%; animation: heroZoom 14s ease-out forwards; }
+    @keyframes heroZoom { from { transform: scale(1.05); } to { transform: scale(1.0); } }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(110deg, rgba(10,31,60,.93) 0%, rgba(10,31,60,.72) 55%, rgba(10,31,60,.25) 100%); }
+    .hero-overlay::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 60%, rgba(10,31,60,.5) 100%); }
+    .hero-inner { max-width: var(--max-w); margin: 0 auto; padding: 6rem 2rem 4rem; position: relative; z-index: 1; width: 100%; }
+    .hero-eyebrow { font-size: .74rem; font-weight: 400; letter-spacing: .22em; text-transform: uppercase; color: var(--blue-accent); margin-bottom: 1.1rem; display: flex; align-items: center; gap: .75rem; animation: fadeUp .7s ease both; }
+    .hero-eyebrow::before { content: ''; display: block; width: 30px; height: 1px; background: var(--blue-accent); }
+    .hero h1 { font-family: var(--ff-display); font-size: clamp(2.5rem,6vw,5rem); font-weight: 300; line-height: 1.08; color: var(--white); max-width: 760px; margin-bottom: 1.5rem; animation: fadeUp .7s .1s ease both; }
+    .hero h1 em { font-style: italic; color: var(--blue-accent); }
+    .hero-desc { font-size: 1.05rem; color: rgba(255,255,255,.65); max-width: 500px; line-height: 1.85; margin-bottom: 2.5rem; animation: fadeUp .7s .2s ease both; }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp .7s .3s ease both; }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; padding: .85rem 1.8rem; border-radius: var(--radius); font-family: var(--ff-body); font-size: .82rem; font-weight: 500; letter-spacing: .07em; text-transform: uppercase; cursor: pointer; border: 1.5px solid transparent; transition: var(--trans); }
+    .btn-primary { background: var(--blue-brand); color: var(--white); border-color: var(--blue-brand); }
+    .btn-primary:hover { background: var(--blue-light); border-color: var(--blue-light); transform: translateY(-1px); }
+    .btn-outline { background: transparent; color: rgba(255,255,255,.75); border-color: rgba(255,255,255,.25); }
+    .btn-outline:hover { border-color: rgba(255,255,255,.6); color: var(--white); }
+    .hero-badge { position: absolute; bottom: 2.5rem; right: 2rem; background: rgba(255,255,255,.07); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: 1rem 1.5rem; text-align: right; animation: fadeUp .7s .5s ease both; }
+    .hero-badge-num { font-family: var(--ff-display); font-size: 2rem; font-weight: 600; color: var(--white); line-height: 1; display: block; }
+    .hero-badge-label { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.45); }
+
+    /* STATS */
+    .stats-bar { background: var(--blue-mid); }
+    .stats-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(4,1fr); }
+    .stat { padding: 1.8rem 1.5rem; text-align: center; border-right: 1px solid rgba(255,255,255,.08); }
+    .stat:last-child { border-right: none; }
+    .stat-number { font-family: var(--ff-display); font-size: 2rem; font-weight: 600; color: var(--blue-accent); line-height: 1; display: block; }
+    .stat-label { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-top: .4rem; display: block; }
+
+    /* SECTIONS */
+    .content-section { padding: 6rem 2rem; }
+    .section-inner { max-width: var(--max-w); margin: 0 auto; }
+    .section-label { font-size: .72rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--blue-brand); margin-bottom: .75rem; display: flex; align-items: center; gap: .75rem; }
+    .section-label::before { content: ''; display: block; width: 24px; height: 1.5px; background: var(--blue-brand); }
+    h2 { font-family: var(--ff-display); font-size: clamp(1.9rem,3.5vw,2.8rem); font-weight: 300; line-height: 1.15; color: var(--blue-deep); margin-bottom: 1.5rem; }
+
+    /* ABOUT */
+    .about { background: var(--off-white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-text p { color: var(--muted); margin-bottom: 1rem; font-size: 1rem; }
+    .about-text p strong { color: var(--blue-deep); font-weight: 500; }
+    .about-image-wrap { position: relative; }
+    .about-image-wrap::before { content: ''; position: absolute; top: -14px; left: -14px; right: 14px; bottom: 14px; border: 2px solid var(--blue-brand); border-radius: var(--radius); z-index: 0; opacity: .35; }
+    .about-image-wrap img { width: 100%; border-radius: var(--radius); box-shadow: 0 24px 64px rgba(10,31,60,.18); position: relative; z-index: 1; }
+    .about-photo-badge { position: absolute; bottom: -1rem; left: -1rem; background: var(--blue-brand); color: var(--white); border-radius: var(--radius); padding: .75rem 1.25rem; font-family: var(--ff-display); font-size: .85rem; font-weight: 400; letter-spacing: .06em; box-shadow: 0 8px 24px rgba(10,31,60,.25); z-index: 2; }
+    .about-photo-badge strong { display: block; font-size: 1.15rem; font-weight: 600; }
+
+    /* SERVICES */
+    .services { background: var(--white); }
+    .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3rem; }
+    .service-card { background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; transition: var(--trans); position: relative; overflow: hidden; }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--blue-brand); transition: height .4s ease; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(10,31,60,.1); }
+    .service-card:hover::before { height: 100%; }
+    .service-icon { width: 46px; height: 46px; background: var(--blue-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
+    .service-icon svg { width: 20px; height: 20px; stroke: var(--blue-brand); fill: none; stroke-width: 1.5; }
+    .service-card h3 { font-family: var(--ff-display); font-size: 1.1rem; font-weight: 400; color: var(--blue-deep); margin-bottom: .65rem; }
+    .service-card p { font-size: .88rem; color: var(--muted); line-height: 1.7; }
+
+    /* REGIONS */
+    .regions { background: var(--blue-deep); }
+    .regions h2 { color: var(--white); }
+    .regions .section-label { color: var(--blue-accent); }
+    .regions .section-label::before { background: var(--blue-accent); }
+    .regions-intro { max-width: 600px; color: rgba(255,255,255,.5); margin-bottom: 2.5rem; }
+    .regions-list { display: flex; flex-wrap: wrap; gap: .75rem; list-style: none; }
+    .regions-list li { display: flex; align-items: center; gap: .5rem; padding: .55rem 1.15rem; background: rgba(58,114,196,.12); border: 1px solid rgba(58,114,196,.3); border-radius: 100px; font-size: .84rem; color: rgba(255,255,255,.8); }
+    .regions-list li::before { content: ''; width: 6px; height: 6px; background: var(--blue-accent); border-radius: 50%; display: block; flex-shrink: 0; }
+
+    /* CONTACT */
+    .contact { background: var(--blue-pale); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+    .contact-info h3 { font-family: var(--ff-display); font-size: 1.4rem; font-weight: 300; color: var(--blue-deep); margin-bottom: 2rem; }
+    .contact-item { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+    .contact-item-icon { width: 40px; height: 40px; background: var(--blue-brand); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-item-icon svg { width: 16px; height: 16px; stroke: var(--white); fill: none; stroke-width: 1.5; }
+    .contact-item-text { font-size: .9rem; color: var(--muted); line-height: 1.8; }
+    .contact-item-text strong { display: block; color: var(--blue-deep); font-weight: 500; font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .2rem; }
+    .contact-item-text a { color: var(--blue-brand); transition: var(--trans); }
+    .contact-item-text a:hover { color: var(--blue-light); }
+    .contact-card { background: var(--blue-deep); border-radius: 8px; padding: 2.5rem; color: var(--white); }
+    .contact-card h4 { font-family: var(--ff-display); font-size: 1.1rem; font-weight: 300; color: rgba(255,255,255,.55); margin-bottom: 1rem; }
+    .contact-card p { font-size: .9rem; color: rgba(255,255,255,.45); line-height: 1.8; margin-bottom: 1.25rem; }
+    .contact-card img { border-radius: 4px; margin-bottom: 1.25rem; opacity: .65; width: 100%; }
+    .contact-map-link { display: inline-flex; align-items: center; gap: .5rem; color: var(--blue-accent); font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; font-weight: 500; transition: var(--trans); }
+    .contact-map-link:hover { color: var(--white); }
+    .contact-map-link svg { width: 14px; height: 14px; }
+
+    /* FOOTER */
+    footer { background: var(--blue-deep); border-top: 1px solid rgba(58,114,196,.2); padding: 1.5rem 2rem; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-copy { font-size: .78rem; color: rgba(255,255,255,.3); }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links a { font-size: .78rem; color: rgba(255,255,255,.35); transition: var(--trans); }
+    .footer-links a:hover { color: var(--blue-accent); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+    .fade-in { opacity: 0; }
+    .fade-in.visible { animation: fadeUp .6s ease both; }
+
+    /* LANGUAGE LOGIC */
+    [data-lang] { display: none; }
+    .lang-de [data-lang="de"],
+    .lang-en [data-lang="en"],
+    .lang-fr [data-lang="fr"] { display: inherit; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .about-image-wrap { order: -1; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .stats-inner { grid-template-columns: repeat(2,1fr); }
+      .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
+    }
+    @media (max-width: 600px) {
+      nav { display: none; }
+      nav.open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; background: var(--blue-deep); padding: 1rem; border-bottom: 1px solid rgba(58,114,196,.2); gap: 0; z-index: 99; }
+      nav.open a { padding: .9rem 1rem; }
+      .menu-toggle { display: flex; }
+      .services-grid { grid-template-columns: 1fr; }
+      .hero { min-height: 80vh; }
+      .hero-badge { display: none; }
+      .about-grid { gap: 2.5rem; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+
+<body class="lang-de">
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+  <!-- LANG BAR -->
+  <div class="lang-bar" role="navigation" aria-label="Sprachauswahl / Language / Langue">
+    <div class="lang-bar-inner">
+      <span class="lang-label" data-lang="de">Sprache:</span>
+      <span class="lang-label" data-lang="en">Language:</span>
+      <span class="lang-label" data-lang="fr">Langue :</span>
+      <button class="lang-btn active" onclick="setLang('de')" aria-label="Deutsch" lang="de">DE</button>
+      <button class="lang-btn" onclick="setLang('en')" aria-label="English" lang="en">EN</button>
+      <button class="lang-btn" onclick="setLang('fr')" aria-label="Français" lang="fr">FR</button>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Welmac – Startseite">Wel<em>mac</em></a>
+      <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="main-nav" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" role="navigation" aria-label="Hauptnavigation">
+        <a href="index.html" aria-current="page">
+          <span data-lang="de">Unternehmen</span><span data-lang="en">Company</span><span data-lang="fr">Entreprise</span>
+        </a>
+        <a href="industriebedarf.html">
+          <span data-lang="de">Industriebedarf</span><span data-lang="en">Industrial Supply</span><span data-lang="fr">Fournitures</span>
+        </a>
+        <a href="chemie.html">
+          <span data-lang="de">Chemie</span><span data-lang="en">Chemistry</span><span data-lang="fr">Chimie</span>
+        </a>
+        <a href="holzbearbeitung.html">
+          <span data-lang="de">Holzbearbeitung</span><span data-lang="en">Woodworking</span><span data-lang="fr">Travail du Bois</span>
+        </a>
+        <a href="kontakt.html">
+          <span data-lang="de">Kontakt</span><span data-lang="en">Contact</span><span data-lang="fr">Contact</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg" role="img" aria-label="Welmac Firmengebäude in Unterensingen"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Unterensingen, Germany · seit 1998</p>
+        <h1 id="hero-heading">
+          <span data-lang="de">Engineering &amp;<br /><em>Industrieanlagen</em><br />aus Deutschland</span>
+          <span data-lang="en">Engineering &amp;<br /><em>Industrial Plants</em><br />from Germany</span>
+          <span data-lang="fr">Ingénierie &amp;<br /><em>Installations Industrielles</em><br />d'Allemagne</span>
+        </h1>
+        <p class="hero-desc">
+          <span data-lang="de">Welmac ist Ihr Komplettpartner für Engineering, Projektierung und Lieferung industrieller Anlagen – von der Planung bis zur Inbetriebnahme, weltweit.</span>
+          <span data-lang="en">Welmac is your complete partner for engineering, project planning and delivery of industrial plants – from design to commissioning, worldwide.</span>
+          <span data-lang="fr">Welmac est votre partenaire complet en ingénierie, conception et fourniture d'installations industrielles – de la planification à la mise en service, partout dans le monde.</span>
+        </p>
+        <div class="hero-cta">
+          <a href="kontakt.html" class="btn btn-primary">
+            <span data-lang="de">Kontakt aufnehmen</span>
+            <span data-lang="en">Get in touch</span>
+            <span data-lang="fr">Nous contacter</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#leistungen" class="btn btn-outline">
+            <span data-lang="de">Unsere Leistungen</span>
+            <span data-lang="en">Our Services</span>
+            <span data-lang="fr">Nos Services</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-badge" aria-hidden="true">
+        <span class="hero-badge-num">25+</span>
+        <span class="hero-badge-label">
+          <span data-lang="de">Jahre Erfahrung</span><span data-lang="en">Years Experience</span><span data-lang="fr">Ans d'Expérience</span>
+        </span>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-bar" aria-label="Kennzahlen">
+      <div class="stats-inner">
+        <div class="stat"><span class="stat-number">25+</span><span class="stat-label"><span data-lang="de">Jahre Erfahrung</span><span data-lang="en">Years Experience</span><span data-lang="fr">Ans d'Expérience</span></span></div>
+        <div class="stat"><span class="stat-number">9</span><span class="stat-label"><span data-lang="de">Länder weltweit</span><span data-lang="en">Countries Worldwide</span><span data-lang="fr">Pays dans le Monde</span></span></div>
+        <div class="stat"><span class="stat-number">B2B</span><span class="stat-label"><span data-lang="de">Industriefokus</span><span data-lang="en">Industry Focus</span><span data-lang="fr">Focus Industrie</span></span></div>
+        <div class="stat"><span class="stat-number">360°</span><span class="stat-label"><span data-lang="de">Komplettlösung</span><span data-lang="en">Complete Solution</span><span data-lang="fr">Solution Complète</span></span></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about content-section" id="unternehmen" aria-labelledby="about-heading">
+      <div class="section-inner">
+        <div class="about-grid">
+          <div class="about-text fade-in">
+            <p class="section-label"><span data-lang="de">Über uns</span><span data-lang="en">About Us</span><span data-lang="fr">À propos</span></p>
+            <h2 id="about-heading">
+              <span data-lang="de">Weltweite Erfahrung.<br />Deutsche Präzision.</span>
+              <span data-lang="en">Global Experience.<br />German Precision.</span>
+              <span data-lang="fr">Expérience Mondiale.<br />Précision Allemande.</span>
+            </h2>
+            <p data-lang="de"><strong>Welmac</strong> ist eine Engineering- und Projektierungs-Gesellschaft für Industrieanlagen. Als zuverlässiger Lieferant bieten wir komplette Fabrikationsanlagen sowie einzelne Maschinen und Komponenten an.</p>
+            <p data-lang="en"><strong>Welmac</strong> is an engineering and project planning company for industrial plants. As a reliable supplier, we offer complete manufacturing plants as well as individual machines and components.</p>
+            <p data-lang="fr"><strong>Welmac</strong> est une société d'ingénierie et de conception pour installations industrielles. En tant que fournisseur fiable, nous proposons des unités de fabrication complètes ainsi que des machines et composants individuels.</p>
+            <p data-lang="de">Wir liefern Engineering, Anlagenkomponenten, Personalschulung, Aufstellung, Inbetriebnahme, technische Betreuung sowie Finanzierungslösungen – alles aus einer Hand.</p>
+            <p data-lang="en">We deliver engineering, plant components, staff training, installation, commissioning, technical support and financing – everything from a single source.</p>
+            <p data-lang="fr">Nous fournissons l'ingénierie, les composants, la formation du personnel, le montage, la mise en service, l'assistance technique et des solutions de financement – de source unique.</p>
+            <p data-lang="de">Seit über 25 Jahren sind wir für die Industrie tätig und mit den Gepflogenheiten und speziellen Anforderungen in vielen Ländern bestens vertraut.</p>
+            <p data-lang="en">For over 25 years we have been active in industry, thoroughly familiar with the customs and specific requirements of many countries.</p>
+            <p data-lang="fr">Depuis plus de 25 ans, nous travaillons pour l'industrie et connaissons parfaitement les pratiques et les exigences spécifiques de nombreux pays.</p>
+          </div>
+          <div class="about-image-wrap fade-in">
+            <img src="IMG_0572.jpeg" alt="Welmac Firmengebäude in Unterensingen – modernes Gebäude mit Glasfassade" width="640" height="430" loading="lazy" />
+            <div class="about-photo-badge"><strong>WELMAC</strong>Unterensingen, Germany</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services content-section" id="leistungen" aria-labelledby="services-heading">
+      <div class="section-inner">
+        <p class="section-label"><span data-lang="de">Leistungen</span><span data-lang="en">Services</span><span data-lang="fr">Prestations</span></p>
+        <h2 id="services-heading">
+          <span data-lang="de">Was wir für Sie leisten</span><span data-lang="en">What we offer</span><span data-lang="fr">Ce que nous offrons</span>
+        </h2>
+        <div class="services-grid">
+          <article class="service-card fade-in">
+            <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <h3><span data-lang="de">Engineering & Projektierung</span><span data-lang="en">Engineering & Planning</span><span data-lang="fr">Ingénierie & Conception</span></h3>
+            <p><span data-lang="de">Planung und Konzeption kompletter Industrieanlagen nach Ihren Anforderungen und internationalen Standards.</span><span data-lang="en">Planning and design of complete industrial plants according to your requirements and international standards.</span><span data-lang="fr">Planification et conception d'installations industrielles complètes selon vos exigences et les normes internationales.</span></p>
+          </article>
+          <article class="service-card fade-in">
+            <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+            <h3><span data-lang="de">Lieferung & Komponenten</span><span data-lang="en">Delivery & Components</span><span data-lang="fr">Livraison & Composants</span></h3>
+            <p><span data-lang="de">Beschaffung und Lieferung aller Maschinen und Komponenten von namhaften deutschen Herstellern.</span><span data-lang="en">Procurement and delivery of all machines and components from renowned German manufacturers.</span><span data-lang="fr">Approvisionnement et livraison de toutes les machines et composants auprès de fabricants allemands renommés.</span></p>
+          </article>
+          <article class="service-card fade-in">
+            <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+            <h3><span data-lang="de">Aufstellung & Inbetriebnahme</span><span data-lang="en">Installation & Commissioning</span><span data-lang="fr">Installation & Mise en Service</span></h3>
+            <p><span data-lang="de">Professionelle Installation und Inbetriebnahme vor Ort durch unsere erfahrenen Ingenieure.</span><span data-lang="en">Professional on-site installation and commissioning by our experienced engineers.</span><span data-lang="fr">Installation et mise en service professionnelles sur site par nos ingénieurs expérimentés.</span></p>
+          </article>
+          <article class="service-card fade-in">
+            <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3><span data-lang="de">Personalschulung</span><span data-lang="en">Staff Training</span><span data-lang="fr">Formation du Personnel</span></h3>
+            <p><span data-lang="de">Umfassende Schulung Ihres Personals für den sicheren und effizienten Betrieb der Anlagen.</span><span data-lang="en">Comprehensive training of your staff for safe and efficient operation of the plants.</span><span data-lang="fr">Formation complète de votre personnel pour un fonctionnement sûr et efficace des installations.</span></p>
+          </article>
+          <article class="service-card fade-in">
+            <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <h3><span data-lang="de">Technische Betreuung</span><span data-lang="en">Technical Support</span><span data-lang="fr">Support Technique</span></h3>
+            <p><span data-lang="de">Langfristige Betreuung Ihrer Anlagen inklusive Wartung, Modernisierung und Ersatzteilversorgung.</span><span data-lang="en">Long-term support including maintenance, modernisation and spare parts supply.</span><span data-lang="fr">Assistance à long terme incluant la maintenance, la modernisation et la fourniture de pièces détachées.</span></p>
+          </article>
+          <article class="service-card fade-in">
+            <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3><span data-lang="de">Finanzierungslösungen</span><span data-lang="en">Financing Solutions</span><span data-lang="fr">Solutions de Financement</span></h3>
+            <p><span data-lang="de">Maßgeschneiderte Finanzierungsmodelle – transparent, flexibel und aus einer Hand.</span><span data-lang="en">Tailor-made financing models – transparent, flexible and from a single source.</span><span data-lang="fr">Modèles de financement sur mesure – transparents, flexibles et de source unique.</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGIONS -->
+    <section class="regions content-section" id="regionen" aria-labelledby="regions-heading">
+      <div class="section-inner">
+        <p class="section-label"><span data-lang="de">Internationale Präsenz</span><span data-lang="en">International Presence</span><span data-lang="fr">Présence Internationale</span></p>
+        <h2 id="regions-heading">
+          <span data-lang="de">Unsere Märkte weltweit</span><span data-lang="en">Our Markets Worldwide</span><span data-lang="fr">Nos Marchés dans le Monde</span>
+        </h2>
+        <p class="regions-intro">
+          <span data-lang="de">Welmac unterhält aktive Vertretungen in folgenden Ländern:</span>
+          <span data-lang="en">Welmac maintains active representations in the following countries:</span>
+          <span data-lang="fr">Welmac dispose de représentations actives dans les pays suivants :</span>
+        </p>
+        <ul class="regions-list fade-in">
+          <li>Algerien / Algeria / Algérie</li>
+          <li>Gabun / Gabon</li>
+          <li>Nigeria</li>
+          <li>Mexiko / Mexico / Mexique</li>
+          <li>China (V.R.)</li>
+          <li>Taiwan</li>
+          <li>Korea (R.O.K.)</li>
+          <li>Hongkong</li>
+          <li>Deutschland / Germany / Allemagne</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact content-section" id="kontakt" aria-labelledby="contact-heading">
+      <div class="section-inner">
+        <p class="section-label"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span><span data-lang="fr">Contact</span></p>
+        <h2 id="contact-heading">
+          <span data-lang="de">Sprechen wir über Ihr Projekt</span><span data-lang="en">Let's talk about your project</span><span data-lang="fr">Parlons de votre projet</span>
+        </h2>
+        <div class="contact-grid">
+          <address class="contact-info fade-in">
+            <h3>Welmac Maschinen-Anlagen GmbH</h3>
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div class="contact-item-text">
+                <strong><span data-lang="de">Adresse</span><span data-lang="en">Address</span><span data-lang="fr">Adresse</span></strong>
+                Kelterstraße 69<br />72669 Unterensingen<br />Germany – R.F.A.
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.35 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div class="contact-item-text"><strong>Telefon</strong><a href="tel:+497022966900">+49 (0) 7022 – 9669-0</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div class="contact-item-text"><strong>E-Mail</strong><a href="mailto:info@welmac.de">info@welmac.de</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg></div>
+              <div class="contact-item-text"><strong>Telefax</strong>+49 (0) 7022 – 9669-19 / 20</div>
+            </div>
+          </address>
+          <div class="contact-card fade-in">
+            <h4><span data-lang="de">Unser Standort</span><span data-lang="en">Our Location</span><span data-lang="fr">Notre Siège</span></h4>
+            <p>
+              <span data-lang="de">Welmac befindet sich in Unterensingen bei Stuttgart, Baden-Württemberg.</span>
+              <span data-lang="en">Welmac is located in Unterensingen near Stuttgart, Baden-Württemberg.</span>
+              <span data-lang="fr">Welmac est située à Unterensingen près de Stuttgart, Bade-Wurtemberg.</span>
+            </p>
+            <img src="IMG_0572.jpeg" alt="Welmac Firmengebäude Unterensingen" loading="lazy" />
+            <a href="https://maps.google.com/?q=Kelterstraße+69,+72669+Unterensingen" target="_blank" rel="noopener noreferrer" class="contact-map-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-lang="de">In Google Maps öffnen</span><span data-lang="en">Open in Google Maps</span><span data-lang="fr">Ouvrir dans Google Maps</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 Welmac Maschinen-Anlagen GmbH · Unterensingen, Germany</p>
+      <ul class="footer-links">
+        <li><a href="index.html"><span data-lang="de">Startseite</span><span data-lang="en">Home</span><span data-lang="fr">Accueil</span></a></li>
+        <li><a href="kontakt.html"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span><span data-lang="fr">Contact</span></a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span><span data-lang="fr">Confidentialité</span></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.className = 'lang-' + lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.lang === lang));
+      try { localStorage.setItem('welmac-lang', lang); } catch(e) {}
+    }
+    try {
+      const saved = localStorage.getItem('welmac-lang');
+      if (saved && ['de','en','fr'].includes(saved)) setLang(saved);
+    } catch(e) {}
+
+    function toggleMenu(btn) {
+      const nav = document.getElementById('main-nav');
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    }
+    document.querySelectorAll('#main-nav a').forEach(l => l.addEventListener('click', () => {
+      document.getElementById('main-nav').classList.remove('open');
+      document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');
+    }));
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
