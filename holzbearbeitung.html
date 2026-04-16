@@ -1,0 +1,583 @@
+!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holzbearbeitung – Welmac | Maschinen & Anlagen für die Holzindustrie</title>
+  <meta name="description" content="Welmac liefert Maschinen und komplette Anlagen für die Holzbearbeitung und Holzindustrie: Sägewerke, Plattenwerke, Trocknungsanlagen, Oberflächenbehandlung und mehr – aus Deutschland, weltweit." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.welmac.de/holzbearbeitung.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue-deep:   #0a1f3c;
+      --blue-mid:    #1a3a6e;
+      --blue-brand:  #1d4fa0;
+      --blue-light:  #3a72c4;
+      --blue-accent: #7aabff;
+      --blue-pale:   #e8eef8;
+      --off-white:   #f4f6fb;
+      --white:       #ffffff;
+      --text:        #111827;
+      --muted:       #4b5a6e;
+      --border:      #c8d5e8;
+      /* Warm wood accent for this page only */
+      --wood:        #a0652a;
+      --wood-light:  #c8893f;
+      --wood-pale:   #f5ede0;
+      --ff-display:  'Fraunces', Georgia, serif;
+      --ff-body:     'DM Sans', system-ui, sans-serif;
+      --radius: 4px;
+      --trans: 0.25s ease;
+      --max-w: 1200px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--ff-body); font-weight: 300; color: var(--text); background: var(--white); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .skip-link { position: absolute; top: -100px; left: 1rem; background: var(--blue-brand); color: var(--white); padding: .5rem 1rem; border-radius: var(--radius); font-weight: 500; z-index: 9999; transition: top .2s; }
+    .skip-link:focus { top: 1rem; }
+
+    /* LANG BAR */
+    .lang-bar { background: var(--blue-deep); border-bottom: 1px solid rgba(255,255,255,.07); }
+    .lang-bar-inner { max-width: var(--max-w); margin: 0 auto; padding: .45rem 2rem; display: flex; justify-content: flex-end; align-items: center; gap: .45rem; }
+    .lang-label { font-size: .7rem; color: rgba(255,255,255,.3); letter-spacing: .1em; text-transform: uppercase; margin-right: .4rem; }
+    .lang-btn { font-size: .7rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.45); padding: .25rem .65rem; border: 1px solid rgba(255,255,255,.15); border-radius: 100px; cursor: pointer; background: none; font-family: var(--ff-body); transition: var(--trans); }
+    .lang-btn:hover { color: var(--white); border-color: rgba(255,255,255,.4); }
+    .lang-btn.active { color: var(--white); background: var(--blue-brand); border-color: var(--blue-brand); }
+
+    /* HEADER */
+    header { position: sticky; top: 0; z-index: 100; background: rgba(10,31,60,.97); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(58,114,196,.25); }
+    .header-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--ff-display); font-size: 1.65rem; font-weight: 600; color: var(--white); letter-spacing: .12em; text-transform: uppercase; }
+    .logo em { font-style: normal; color: var(--blue-accent); }
+    nav { display: flex; align-items: center; gap: .1rem; }
+    nav a { font-size: .78rem; font-weight: 400; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.65); padding: .5rem .85rem; border-radius: var(--radius); transition: var(--trans); }
+    nav a:hover, nav a[aria-current="page"] { color: var(--white); background: rgba(58,114,196,.2); }
+    nav a[aria-current="page"] { color: var(--blue-accent); }
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+    .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--white); }
+
+    /* PAGE HERO – warmer Holz-Ton im Gradient */
+    .page-hero {
+      background: linear-gradient(135deg, var(--blue-deep) 0%, #1a2e4a 40%, #2a3820 100%);
+      padding: 5rem 2rem 4rem; position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(160,101,42,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(160,101,42,.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    /* Wood grain decorative element */
+    .page-hero::after {
+      content: '';
+      position: absolute; right: -80px; top: -80px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(160,101,42,.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .page-hero-inner { max-width: var(--max-w); margin: 0 auto; position: relative; z-index: 1; }
+    .breadcrumb { font-size: .75rem; color: rgba(255,255,255,.4); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1.25rem; display: flex; align-items: center; gap: .5rem; }
+    .breadcrumb a { color: rgba(255,255,255,.4); transition: var(--trans); }
+    .breadcrumb a:hover { color: var(--wood-light); }
+    .breadcrumb span { color: rgba(255,255,255,.2); }
+    .page-hero h1 { font-family: var(--ff-display); font-size: clamp(2rem,5vw,3.8rem); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 1rem; animation: fadeUp .6s ease both; }
+    .page-hero h1 em { font-style: italic; color: var(--wood-light); }
+    .page-hero-desc { font-size: 1rem; color: rgba(255,255,255,.6); max-width: 600px; line-height: 1.8; animation: fadeUp .6s .1s ease both; }
+
+    /* SECTIONS */
+    .content-section { padding: 5rem 2rem; }
+    .section-inner { max-width: var(--max-w); margin: 0 auto; }
+    .section-label { font-size: .72rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--blue-brand); margin-bottom: .75rem; display: flex; align-items: center; gap: .75rem; }
+    .section-label::before { content: ''; display: block; width: 24px; height: 1.5px; background: var(--blue-brand); }
+    h2 { font-family: var(--ff-display); font-size: clamp(1.7rem,3vw,2.4rem); font-weight: 300; line-height: 1.15; color: var(--blue-deep); margin-bottom: 1rem; }
+    .section-intro { color: var(--muted); max-width: 680px; margin-bottom: 3rem; font-size: 1rem; line-height: 1.85; }
+
+    /* INTRO SPLIT */
+    .intro-section { background: var(--wood-pale); }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .intro-text p { color: var(--muted); margin-bottom: 1rem; }
+    .intro-text p strong { color: var(--blue-deep); font-weight: 500; }
+    .intro-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .intro-stat { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; text-align: center; border-top: 3px solid var(--wood); }
+    .intro-stat-num { font-family: var(--ff-display); font-size: 2rem; font-weight: 600; color: var(--wood); line-height: 1; display: block; }
+    .intro-stat-label { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; margin-top: .35rem; display: block; }
+
+    /* MACHINE CATEGORIES */
+    .machines-section { background: var(--white); }
+    .machines-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+    .machine-card { background: var(--off-white); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; transition: var(--trans); }
+    .machine-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(10,31,60,.1); }
+    .machine-card-top { background: var(--blue-deep); padding: 1.5rem; display: flex; align-items: center; gap: .9rem; }
+    .machine-card-top svg { width: 22px; height: 22px; stroke: var(--wood-light); fill: none; stroke-width: 1.5; flex-shrink: 0; }
+    .machine-card-top h3 { font-family: var(--ff-display); font-size: 1rem; font-weight: 400; color: var(--white); line-height: 1.2; }
+    .machine-card-body { padding: 1.5rem; }
+    .machine-list { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
+    .machine-list li { display: flex; align-items: flex-start; gap: .65rem; font-size: .87rem; color: var(--muted); padding-bottom: .55rem; border-bottom: 1px solid var(--border); }
+    .machine-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .machine-list li::before { content: ''; display: block; width: 5px; height: 5px; background: var(--wood); border-radius: 50%; margin-top: .58rem; flex-shrink: 0; }
+
+    /* PROCESS CHAIN */
+    .process-section { background: var(--blue-deep); }
+    .process-section h2 { color: var(--white); }
+    .process-section .section-label { color: var(--wood-light); }
+    .process-section .section-label::before { background: var(--wood-light); }
+    .process-intro { color: rgba(255,255,255,.55); max-width: 600px; margin-bottom: 3rem; }
+    .process-chain { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+    .process-chain::before { content: ''; position: absolute; top: 32px; left: 10%; right: 10%; height: 1px; background: rgba(160,101,42,.4); z-index: 0; }
+    .process-step { text-align: center; padding: 0 .5rem; position: relative; z-index: 1; }
+    .process-dot { width: 64px; height: 64px; background: rgba(160,101,42,.15); border: 1.5px solid rgba(160,101,42,.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; }
+    .process-dot svg { width: 24px; height: 24px; stroke: var(--wood-light); fill: none; stroke-width: 1.5; }
+    .process-step h4 { font-family: var(--ff-display); font-size: .9rem; font-weight: 400; color: var(--white); margin-bottom: .35rem; line-height: 1.2; }
+    .process-step p { font-size: .75rem; color: rgba(255,255,255,.4); line-height: 1.5; }
+
+    /* DELIVERY SCOPE */
+    .delivery-section { background: var(--off-white); }
+    .delivery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+    .delivery-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 2rem; }
+    .delivery-card h3 { font-family: var(--ff-display); font-size: 1.1rem; font-weight: 400; color: var(--blue-deep); margin-bottom: 1.25rem; display: flex; align-items: center; gap: .75rem; }
+    .delivery-card h3 svg { width: 20px; height: 20px; stroke: var(--blue-brand); fill: none; stroke-width: 1.5; }
+    .delivery-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .delivery-list li { display: flex; align-items: flex-start; gap: .65rem; font-size: .88rem; color: var(--muted); }
+    .delivery-list li::before { content: '✓'; color: var(--blue-brand); font-weight: 500; font-size: .85rem; flex-shrink: 0; margin-top: .1rem; }
+
+    /* CTA */
+    .cta-section { background: var(--blue-pale); }
+    .cta-inner { max-width: var(--max-w); margin: 0 auto; padding: 4rem 2rem; text-align: center; }
+    .cta-inner h2 { color: var(--blue-deep); margin-bottom: 1rem; }
+    .cta-inner p { color: var(--muted); max-width: 500px; margin: 0 auto 2rem; }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; padding: .85rem 1.8rem; border-radius: var(--radius); font-family: var(--ff-body); font-size: .82rem; font-weight: 500; letter-spacing: .07em; text-transform: uppercase; border: 1.5px solid transparent; transition: var(--trans); }
+    .btn-primary { background: var(--blue-brand); color: var(--white); border-color: var(--blue-brand); }
+    .btn-primary:hover { background: var(--blue-light); border-color: var(--blue-light); transform: translateY(-1px); }
+
+    /* FOOTER */
+    footer { background: var(--blue-deep); border-top: 1px solid rgba(58,114,196,.2); padding: 1.5rem 2rem; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-copy { font-size: .78rem; color: rgba(255,255,255,.3); }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links a { font-size: .78rem; color: rgba(255,255,255,.35); transition: var(--trans); }
+    .footer-links a:hover { color: var(--blue-accent); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .fade-in { opacity: 0; }
+    .fade-in.visible { animation: fadeUp .6s ease both; }
+
+    /* LANGUAGE */
+    [data-lang] { display: none; }
+    .lang-de [data-lang="de"],
+    .lang-en [data-lang="en"],
+    .lang-fr [data-lang="fr"] { display: inherit; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1000px) {
+      .machines-grid { grid-template-columns: 1fr 1fr; }
+      .process-chain { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+      .process-chain::before { display: none; }
+    }
+    @media (max-width: 900px) {
+      .intro-grid, .delivery-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      nav { display: none; }
+      nav.open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; background: var(--blue-deep); padding: 1rem; border-bottom: 1px solid rgba(58,114,196,.2); gap: 0; z-index: 99; }
+      nav.open a { padding: .9rem 1rem; }
+      .menu-toggle { display: flex; }
+      .machines-grid { grid-template-columns: 1fr; }
+      .process-chain { grid-template-columns: 1fr 1fr; }
+      .intro-stats { grid-template-columns: 1fr 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+
+<body class="lang-de">
+  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+  <!-- LANG BAR -->
+  <div class="lang-bar" role="navigation" aria-label="Sprachauswahl">
+    <div class="lang-bar-inner">
+      <span class="lang-label" data-lang="de">Sprache:</span>
+      <span class="lang-label" data-lang="en">Language:</span>
+      <span class="lang-label" data-lang="fr">Langue :</span>
+      <button class="lang-btn active" onclick="setLang('de')" lang="de" aria-label="Deutsch">DE</button>
+      <button class="lang-btn" onclick="setLang('en')" lang="en" aria-label="English">EN</button>
+      <button class="lang-btn" onclick="setLang('fr')" lang="fr" aria-label="Français">FR</button>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Welmac – Startseite">Wel<em>mac</em></a>
+      <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="main-nav" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" role="navigation" aria-label="Hauptnavigation">
+        <a href="index.html"><span data-lang="de">Unternehmen</span><span data-lang="en">Company</span><span data-lang="fr">Entreprise</span></a>
+        <a href="industriebedarf.html"><span data-lang="de">Industriebedarf</span><span data-lang="en">Industrial Supply</span><span data-lang="fr">Fournitures</span></a>
+        <a href="chemie.html"><span data-lang="de">Chemie</span><span data-lang="en">Chemistry</span><span data-lang="fr">Chimie</span></a>
+        <a href="holzbearbeitung.html" aria-current="page"><span data-lang="de">Holzbearbeitung</span><span data-lang="en">Woodworking</span><span data-lang="fr">Travail du Bois</span></a>
+        <a href="kontakt.html"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span><span data-lang="fr">Contact</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="page-hero-inner">
+        <nav class="breadcrumb" aria-label="Brotkrumen-Navigation">
+          <a href="index.html">Welmac</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">
+            <span data-lang="de">Holzbearbeitung</span><span data-lang="en">Woodworking</span><span data-lang="fr">Travail du Bois</span>
+          </span>
+        </nav>
+        <h1 id="page-title">
+          <span data-lang="de">Maschinen &amp; Anlagen für<br />die <em>Holzindustrie</em></span>
+          <span data-lang="en">Machines &amp; Plants for<br />the <em>Wood Industry</em></span>
+          <span data-lang="fr">Machines &amp; Installations pour<br />l'<em>Industrie du Bois</em></span>
+        </h1>
+        <p class="page-hero-desc">
+          <span data-lang="de">Welmac liefert Maschinen, Anlagen und komplette Systeme für die Holzbearbeitung und Holzverarbeitung – von der Sägelinie bis zur fertigen Oberfläche, weltweit.</span>
+          <span data-lang="en">Welmac delivers machines, plants and complete systems for woodworking and wood processing – from the sawing line to the finished surface, worldwide.</span>
+          <span data-lang="fr">Welmac livre machines, installations et systèmes complets pour le travail et la transformation du bois – de la ligne de sciage à la surface finie, dans le monde entier.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro-section content-section" id="uebersicht" aria-labelledby="intro-heading">
+      <div class="section-inner">
+        <div class="intro-grid">
+          <div class="intro-text fade-in">
+            <p class="section-label"><span data-lang="de">Über diesen Bereich</span><span data-lang="en">About this area</span><span data-lang="fr">À propos de ce domaine</span></p>
+            <h2 id="intro-heading">
+              <span data-lang="de">Deutsche Maschinenbau­qualität für die Holzindustrie</span>
+              <span data-lang="en">German engineering quality for the wood industry</span>
+              <span data-lang="fr">Qualité d'ingénierie allemande pour l'industrie du bois</span>
+            </h2>
+            <p data-lang="de"><strong>Welmac</strong> ist seit über 25 Jahren Lieferant für Maschinen und komplette Anlagen in der Holzbearbeitungs- und Holzverarbeitungsbranche. Wir arbeiten mit führenden deutschen und europäischen Herstellern zusammen.</p>
+            <p data-lang="en"><strong>Welmac</strong> has been a supplier of machines and complete plants in the woodworking and wood processing industry for over 25 years. We work with leading German and European manufacturers.</p>
+            <p data-lang="fr"><strong>Welmac</strong> est fournisseur de machines et d'installations complètes dans l'industrie du travail du bois depuis plus de 25 ans. Nous collaborons avec les principaux fabricants allemands et européens.</p>
+            <p data-lang="de">Von der einzelnen Maschine bis zur schlüsselfertigen Fabrikationsanlage bieten wir Engineering, Lieferung, Inbetriebnahme und After-Sales-Service aus einer Hand.</p>
+            <p data-lang="en">From a single machine to a turnkey manufacturing plant, we offer engineering, delivery, commissioning and after-sales service from a single source.</p>
+            <p data-lang="fr">De la machine individuelle à l'installation clé en main, nous offrons ingénierie, livraison, mise en service et service après-vente de source unique.</p>
+          </div>
+          <div class="intro-stats fade-in" aria-label="Kennzahlen Holzbearbeitung">
+            <div class="intro-stat">
+              <span class="intro-stat-num">25+</span>
+              <span class="intro-stat-label"><span data-lang="de">Jahre Erfahrung</span><span data-lang="en">Years Experience</span><span data-lang="fr">Ans d'Expérience</span></span>
+            </div>
+            <div class="intro-stat">
+              <span class="intro-stat-num">360°</span>
+              <span class="intro-stat-label"><span data-lang="de">Komplettservice</span><span data-lang="en">Full Service</span><span data-lang="fr">Service Complet</span></span>
+            </div>
+            <div class="intro-stat">
+              <span class="intro-stat-num">DE</span>
+              <span class="intro-stat-label"><span data-lang="de">Qualität made in Germany</span><span data-lang="en">Quality made in Germany</span><span data-lang="fr">Qualité made in Germany</span></span>
+            </div>
+            <div class="intro-stat">
+              <span class="intro-stat-num">B2B</span>
+              <span class="intro-stat-label"><span data-lang="de">Industriekunden weltweit</span><span data-lang="en">Industrial clients worldwide</span><span data-lang="fr">Clients industriels mondiaux</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MACHINES -->
+    <section class="machines-section content-section" id="maschinen" aria-labelledby="machines-heading">
+      <div class="section-inner">
+        <p class="section-label"><span data-lang="de">Maschinenkategorien</span><span data-lang="en">Machine Categories</span><span data-lang="fr">Catégories de Machines</span></p>
+        <h2 id="machines-heading">
+          <span data-lang="de">Unser Lieferprogramm für die Holzindustrie</span>
+          <span data-lang="en">Our supply programme for the wood industry</span>
+          <span data-lang="fr">Notre programme de livraison pour l'industrie du bois</span>
+        </h2>
+        <p class="section-intro">
+          <span data-lang="de">Welmac liefert Maschinen und Anlagen für alle Stufen der Holzbearbeitung – vom Rohholz bis zum fertigen Produkt.</span>
+          <span data-lang="en">Welmac supplies machines and plants for all stages of wood processing – from raw timber to the finished product.</span>
+          <span data-lang="fr">Welmac fournit machines et installations pour toutes les étapes de la transformation du bois – du bois brut au produit fini.</span>
+        </p>
+
+        <div class="machines-grid">
+
+          <article class="machine-card fade-in" aria-labelledby="mc1">
+            <div class="machine-card-top">
+              <svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+              <h3 id="mc1"><span data-lang="de">Sägewerke & Schnittholz</span><span data-lang="en">Sawmills & Sawn Timber</span><span data-lang="fr">Scieries & Bois Scié</span></h3>
+            </div>
+            <div class="machine-card-body">
+              <ul class="machine-list">
+                <li><span data-lang="de">Bandsägen, Gattersägen, Kreissägen</span><span data-lang="en">Band saws, frame saws, circular saws</span><span data-lang="fr">Scies à ruban, scies à cadre, scies circulaires</span></li>
+                <li><span data-lang="de">Sortier- und Stapelmaschinen</span><span data-lang="en">Sorting and stacking machines</span><span data-lang="fr">Machines de tri et d'empilage</span></li>
+                <li><span data-lang="de">Entrindungsmaschinen</span><span data-lang="en">Debarking machines</span><span data-lang="fr">Machines à écorcer</span></li>
+                <li><span data-lang="de">Komplette Sägelinien</span><span data-lang="en">Complete sawmill lines</span><span data-lang="fr">Lignes de sciage complètes</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="machine-card fade-in" aria-labelledby="mc2">
+            <div class="machine-card-top">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              <h3 id="mc2"><span data-lang="de">Plattenwerke & Holzwerkstoffe</span><span data-lang="en">Panel Plants & Wood-Based Materials</span><span data-lang="fr">Usines de Panneaux</span></h3>
+            </div>
+            <div class="machine-card-body">
+              <ul class="machine-list">
+                <li><span data-lang="de">Spanplattenanlagen</span><span data-lang="en">Particleboard plants</span><span data-lang="fr">Installations pour panneaux de particules</span></li>
+                <li><span data-lang="de">MDF- / HDF-Anlagen</span><span data-lang="en">MDF / HDF plants</span><span data-lang="fr">Installations MDF / HDF</span></li>
+                <li><span data-lang="de">OSB-Anlagen</span><span data-lang="en">OSB plants</span><span data-lang="fr">Installations OSB</span></li>
+                <li><span data-lang="de">Sperrholzanlagen</span><span data-lang="en">Plywood plants</span><span data-lang="fr">Installations pour contreplaqué</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="machine-card fade-in" aria-labelledby="mc3">
+            <div class="machine-card-top">
+              <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="4"/></svg>
+              <h3 id="mc3"><span data-lang="de">Trocknungsanlagen</span><span data-lang="en">Drying Plants</span><span data-lang="fr">Installations de Séchage</span></h3>
+            </div>
+            <div class="machine-card-body">
+              <ul class="machine-list">
+                <li><span data-lang="de">Kammer- und Durchlauftrockner</span><span data-lang="en">Chamber and continuous dryers</span><span data-lang="fr">Séchoirs à chambre et continus</span></li>
+                <li><span data-lang="de">Hochfrequenz-Trocknungsanlagen</span><span data-lang="en">High-frequency drying plants</span><span data-lang="fr">Installations de séchage à haute fréquence</span></li>
+                <li><span data-lang="de">Energieeffiziente Wärmerückgewinnung</span><span data-lang="en">Energy-efficient heat recovery</span><span data-lang="fr">Récupération de chaleur à haute efficacité</span></li>
+                <li><span data-lang="de">Steuer- und Regelungssysteme</span><span data-lang="en">Control and regulation systems</span><span data-lang="fr">Systèmes de commande et de régulation</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="machine-card fade-in" aria-labelledby="mc4">
+            <div class="machine-card-top">
+              <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              <h3 id="mc4"><span data-lang="de">Hobelwerke & Profilieren</span><span data-lang="en">Planing Mills & Profiling</span><span data-lang="fr">Raboteries & Profilage</span></h3>
+            </div>
+            <div class="machine-card-body">
+              <ul class="machine-list">
+                <li><span data-lang="de">Vierseitenhobelmaschinen</span><span data-lang="en">Four-sided planers</span><span data-lang="fr">Dégauchisseuses quatre faces</span></li>
+                <li><span data-lang="de">Kehlmaschinen</span><span data-lang="en">Moulding machines</span><span data-lang="fr">Machines à moulurer</span></li>
+                <li><span data-lang="de">Fingerjoint-Anlagen</span><span data-lang="en">Finger joint plants</span><span data-lang="fr">Installations d'assemblage par entures</span></li>
+                <li><span data-lang="de">Abrichthobelmaschinen</span><span data-lang="en">Surface planers</span><span data-lang="fr">Machines à dégauchir</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="machine-card fade-in" aria-labelledby="mc5">
+            <div class="machine-card-top">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+              <h3 id="mc5"><span data-lang="de">Oberflächenbehandlung</span><span data-lang="en">Surface Treatment</span><span data-lang="fr">Traitement de Surface</span></h3>
+            </div>
+            <div class="machine-card-body">
+              <ul class="machine-list">
+                <li><span data-lang="de">Schleifmaschinen (Breit- und Kalibrierband)</span><span data-lang="en">Sanding machines (wide belt and calibrating)</span><span data-lang="fr">Ponceuses (à large bande et calibreuses)</span></li>
+                <li><span data-lang="de">Lackier- und Beizanlagen</span><span data-lang="en">Painting and staining plants</span><span data-lang="fr">Installations de laquage et teinture</span></li>
+                <li><span data-lang="de">UV-Härteöfen</span><span data-lang="en">UV curing ovens</span><span data-lang="fr">Fours de durcissement UV</span></li>
+                <li><span data-lang="de">Imprägnierungsanlagen</span><span data-lang="en">Impregnation plants</span><span data-lang="fr">Installations d'imprégnation</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="machine-card fade-in" aria-labelledby="mc6">
+            <div class="machine-card-top">
+              <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              <h3 id="mc6"><span data-lang="de">Ersatzteile & Service</span><span data-lang="en">Spare Parts & Service</span><span data-lang="fr">Pièces de Rechange & Service</span></h3>
+            </div>
+            <div class="machine-card-body">
+              <ul class="machine-list">
+                <li><span data-lang="de">Originalersatzteile von Herstellern</span><span data-lang="en">Original spare parts from manufacturers</span><span data-lang="fr">Pièces d'origine des fabricants</span></li>
+                <li><span data-lang="de">Wartungs- und Instandhaltungsservice</span><span data-lang="en">Maintenance and servicing</span><span data-lang="fr">Service de maintenance et d'entretien</span></li>
+                <li><span data-lang="de">Technische Beratung vor Ort</span><span data-lang="en">On-site technical consulting</span><span data-lang="fr">Conseil technique sur site</span></li>
+                <li><span data-lang="de">Modernisierung bestehender Anlagen</span><span data-lang="en">Modernisation of existing plants</span><span data-lang="fr">Modernisation des installations existantes</span></li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS CHAIN -->
+    <section class="process-section content-section" aria-labelledby="process-heading">
+      <div class="section-inner">
+        <p class="section-label"><span data-lang="de">Unser Prozess</span><span data-lang="en">Our Process</span><span data-lang="fr">Notre Processus</span></p>
+        <h2 id="process-heading">
+          <span data-lang="de">Von der Anfrage bis zur Inbetriebnahme</span>
+          <span data-lang="en">From enquiry to commissioning</span>
+          <span data-lang="fr">De la demande à la mise en service</span>
+        </h2>
+        <p class="process-intro">
+          <span data-lang="de">Welmac begleitet Ihr Projekt in jeder Phase – transparent, zuverlässig und mit über 25 Jahren Erfahrung.</span>
+          <span data-lang="en">Welmac accompanies your project at every stage – transparently, reliably and with over 25 years of experience.</span>
+          <span data-lang="fr">Welmac accompagne votre projet à chaque étape – de manière transparente, fiable et avec plus de 25 ans d'expérience.</span>
+        </p>
+        <div class="process-chain" role="list">
+
+          <div class="process-step fade-in" role="listitem">
+            <div class="process-dot" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h4><span data-lang="de">Anfrage</span><span data-lang="en">Enquiry</span><span data-lang="fr">Demande</span></h4>
+            <p><span data-lang="de">Analyse Ihrer Anforderungen</span><span data-lang="en">Analysis of your requirements</span><span data-lang="fr">Analyse de vos besoins</span></p>
+          </div>
+
+          <div class="process-step fade-in" role="listitem">
+            <div class="process-dot" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+            </div>
+            <h4><span data-lang="de">Planung</span><span data-lang="en">Planning</span><span data-lang="fr">Planification</span></h4>
+            <p><span data-lang="de">Engineering & Konzeption</span><span data-lang="en">Engineering & design</span><span data-lang="fr">Ingénierie & conception</span></p>
+          </div>
+
+          <div class="process-step fade-in" role="listitem">
+            <div class="process-dot" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h4><span data-lang="de">Lieferung</span><span data-lang="en">Delivery</span><span data-lang="fr">Livraison</span></h4>
+            <p><span data-lang="de">Beschaffung & Transport</span><span data-lang="en">Procurement & transport</span><span data-lang="fr">Approvisionnement & transport</span></p>
+          </div>
+
+          <div class="process-step fade-in" role="listitem">
+            <div class="process-dot" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+            </div>
+            <h4><span data-lang="de">Inbetriebnahme</span><span data-lang="en">Commissioning</span><span data-lang="fr">Mise en Service</span></h4>
+            <p><span data-lang="de">Aufstellung & Start</span><span data-lang="en">Installation & start-up</span><span data-lang="fr">Installation & démarrage</span></p>
+          </div>
+
+          <div class="process-step fade-in" role="listitem">
+            <div class="process-dot" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h4><span data-lang="de">After-Sales</span><span data-lang="en">After-Sales</span><span data-lang="fr">Après-Vente</span></h4>
+            <p><span data-lang="de">Service & Ersatzteile</span><span data-lang="en">Service & spare parts</span><span data-lang="fr">Service & pièces</span></p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DELIVERY SCOPE -->
+    <section class="delivery-section content-section" aria-labelledby="delivery-heading">
+      <div class="section-inner">
+        <p class="section-label"><span data-lang="de">Leistungsumfang</span><span data-lang="en">Scope of Services</span><span data-lang="fr">Étendue des Prestations</span></p>
+        <h2 id="delivery-heading">
+          <span data-lang="de">Alles aus einer Hand</span>
+          <span data-lang="en">Everything from a single source</span>
+          <span data-lang="fr">Tout de source unique</span>
+        </h2>
+        <div class="delivery-grid">
+          <div class="delivery-card fade-in">
+            <h3>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span data-lang="de">Technische Leistungen</span><span data-lang="en">Technical Services</span><span data-lang="fr">Prestations Techniques</span>
+            </h3>
+            <ul class="delivery-list">
+              <li><span data-lang="de">Design- und Detail-Engineering</span><span data-lang="en">Design and detail engineering</span><span data-lang="fr">Ingénierie de conception et de détail</span></li>
+              <li><span data-lang="de">Machbarkeitsstudien und Consulting</span><span data-lang="en">Feasibility studies and consulting</span><span data-lang="fr">Études de faisabilité et conseil</span></li>
+              <li><span data-lang="de">Aufstellung und Inbetriebnahme</span><span data-lang="en">Installation and commissioning</span><span data-lang="fr">Montage et mise en service</span></li>
+              <li><span data-lang="de">Personalschulung vor Ort</span><span data-lang="en">On-site staff training</span><span data-lang="fr">Formation du personnel sur site</span></li>
+              <li><span data-lang="de">Laufende technische Betreuung</span><span data-lang="en">Ongoing technical support</span><span data-lang="fr">Assistance technique continue</span></li>
+            </ul>
+          </div>
+          <div class="delivery-card fade-in">
+            <h3>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              <span data-lang="de">Lieferleistungen</span><span data-lang="en">Delivery Services</span><span data-lang="fr">Services de Livraison</span>
+            </h3>
+            <ul class="delivery-list">
+              <li><span data-lang="de">Einzelmaschinen und Komplettanlagen</span><span data-lang="en">Individual machines and complete plants</span><span data-lang="fr">Machines individuelles et installations complètes</span></li>
+              <li><span data-lang="de">Originalersatzteile führender Hersteller</span><span data-lang="en">Original spare parts from leading manufacturers</span><span data-lang="fr">Pièces d'origine de fabricants leaders</span></li>
+              <li><span data-lang="de">Steuerungs- und Automatisierungstechnik</span><span data-lang="en">Control and automation technology</span><span data-lang="fr">Technologie de commande et d'automatisation</span></li>
+              <li><span data-lang="de">Finanzierungslösungen auf Anfrage</span><span data-lang="en">Financing solutions on request</span><span data-lang="fr">Solutions de financement sur demande</span></li>
+              <li><span data-lang="de">Weltweite Lieferung und Logistik</span><span data-lang="en">Worldwide delivery and logistics</span><span data-lang="fr">Livraison et logistique mondiales</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="cta-inner">
+        <p class="section-label" style="justify-content:center;">
+          <span data-lang="de">Projekt anfragen</span><span data-lang="en">Request a project</span><span data-lang="fr">Demander un projet</span>
+        </p>
+        <h2 id="cta-heading">
+          <span data-lang="de">Planen Sie eine Holzbearbeitungsanlage?</span>
+          <span data-lang="en">Planning a wood processing plant?</span>
+          <span data-lang="fr">Vous planifiez une installation de transformation du bois ?</span>
+        </h2>
+        <p>
+          <span data-lang="de">Kontaktieren Sie uns – wir beraten Sie gerne und erstellen ein individuelles Angebot für Ihr Projekt.</span>
+          <span data-lang="en">Contact us – we will be happy to advise you and prepare an individual quote for your project.</span>
+          <span data-lang="fr">Contactez-nous – nous vous conseillerons volontiers et établirons un devis personnalisé pour votre projet.</span>
+        </p>
+        <a href="kontakt.html" class="btn btn-primary">
+          <span data-lang="de">Kontakt aufnehmen</span><span data-lang="en">Get in touch</span><span data-lang="fr">Nous contacter</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 Welmac Maschinen-Anlagen GmbH · Unterensingen, Germany</p>
+      <ul class="footer-links">
+        <li><a href="index.html"><span data-lang="de">Startseite</span><span data-lang="en">Home</span><span data-lang="fr">Accueil</span></a></li>
+        <li><a href="kontakt.html"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span><span data-lang="fr">Contact</span></a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span><span data-lang="fr">Confidentialité</span></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.className = 'lang-' + lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.lang === lang));
+      try { localStorage.setItem('welmac-lang', lang); } catch(e) {}
+    }
+    try {
+      const saved = localStorage.getItem('welmac-lang');
+      if (saved && ['de','en','fr'].includes(saved)) setLang(saved);
+    } catch(e) {}
+
+    function toggleMenu(btn) {
+      const nav = document.getElementById('main-nav');
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      btn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    }
+    document.querySelectorAll('#main-nav a').forEach(l => l.addEventListener('click', () => {
+      document.getElementById('main-nav').classList.remove('open');
+      document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');
+    }));
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
